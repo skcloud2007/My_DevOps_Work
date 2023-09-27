@@ -1,0 +1,226 @@
+     
+drjfrog_repo:
+        url: "https://donrivercore.jfrog.io/donrivercore/libs"
+        user: dev-reader
+        password: !vault |
+                $ANSIBLE_VAULT;1.1;AES256
+                61383764643066393531386163643337613361306136373231646361353232643232363436383661
+                3734663864633561633639386533353464613831343031640a343537326163386630313331363961
+                37383734313861306231353939653431626636316261356538346135383639656533356531663239
+                6236303139376130310a356637336134626138346463653161653637643236656461626432303861
+                34656530323633666636623833666533313631613638373230326431646338373238
+
+gitlab_repo:
+        url: "https://git.blueplanet.com/api/v4/projects/3453/packages/maven"
+        token: "Deploy-Token"
+        value: "489VNFz-z5yz8QXGA9pP"
+
+internal_repo:
+        url: "http://artifactory.infra.bpi.ciena.com:8081/artifactory/donriver-repository"
+        url_dr_internal: "http://artifactory.infra.bpi.ciena.com:8081/artifactory/donriver-internal-repository"
+
+
+docker_repo:
+        url: artifactory.ciena.com
+        repo: docker-v2-local
+        path: blueplanet
+        user: bpplatlab2
+        password: !vault |
+                $ANSIBLE_VAULT;1.1;AES256
+                35663435653838363266663832313465613838656364613339303139613936343439663737633764
+                6332636461323963663761393666336237383165653964320a306165363265623030306336346436
+                37303935353163323936663337343034336534663831376538333737393231313162633334666635
+                3032333030303337350a306465626262326465616338386231303166366434646363343932316363
+                66653565623130356165336465396534633734366466633365346463643435346535643361656162
+                63306161303964383834336230346266373539346362653366366333356462323732616232303039
+                31313931323866363535656437663366663339306262356635613161343139353863393433363039
+                36633638353462636231
+
+ciena_repo:
+        url: https://artifactory.ciena.com
+        repo: blueplanet-dist
+        path: mdso
+        user: bpplatlab2
+        password: !vault |
+                $ANSIBLE_VAULT;1.1;AES256
+                35663435653838363266663832313465613838656364613339303139613936343439663737633764
+                6332636461323963663761393666336237383165653964320a306165363265623030306336346436
+                37303935353163323936663337343034336534663831376538333737393231313162633334666635
+                3032333030303337350a306465626262326465616338386231303166366434646363343932316363
+                66653565623130356165336465396534633734366466633365346463643435346535643361656162
+                63306161303964383834336230346266373539346362653366366333356462323732616232303039
+                31313931323866363535656437663366663339306262356635613161343139353863393433363039
+                36633638353462636231
+
+subversionscm:
+        user: "ansible_ro"
+        password: !vault |
+                $ANSIBLE_VAULT;1.1;AES256
+                63336338376439643134373035666262623338303662613562386261353061303137633464303636
+                3535646330323534356664633634363862353162653536370a396132323231646539613833633761
+                34623061616333386633623163336339313432653438646530356162353662376662306538666365
+                3130396561643130660a353531396565383730666165323733653161343366663864353434383464
+                3732
+
+bpisvn:
+        baseurl: "https://svn.infra.bpi.ciena.com/svn"
+        product_repo: "Product"
+        core_repo: "fusion-ui"
+
+ciena_bitbucket:
+        protocol: https://
+        baseurl: "bitbucket.ciena.com/scm"
+        customer_repo: "bp_devops/customer.git"
+        user: "teamcity"
+        # Note: vault key file has to be provided in ansible playbook run command line to decrypt below password
+        password:  !vault |
+                $ANSIBLE_VAULT;1.1;AES256
+                35326430363030373539643738346433306134386237313334306563353032636661636531303537
+                3464663734386432313533316337373233323565376433610a653736376632303236656661643333
+                65626330356264653763316362613936353064363435626566366265393936343738646538616237
+                3135616165353065630a623365376437383034633532323962646464623839366337386137636264
+                61396339616461343164306533383630336236656237323131653135303039323661623466623263
+                3534623535656338646632636434363539386530343439383639
+
+ciena_query_jfrog:
+        url: "https://artifactory.ciena.com"
+        user: "bpplatlab2"
+        password:  !vault |
+                $ANSIBLE_VAULT;1.1;AES256
+                35663435653838363266663832313465613838656364613339303139613936343439663737633764
+                6332636461323963663761393666336237383165653964320a306165363265623030306336346436
+                37303935353163323936663337343034336534663831376538333737393231313162633334666635
+                3032333030303337350a306465626262326465616338386231303166366434646363343932316363
+                66653565623130356165336465396534633734366466633365346463643435346535643361656162
+                63306161303964383834336230346266373539346362653366366333356462323732616232303039
+                31313931323866363535656437663366663339306262356635613161343139353863393433363039
+                36633638353462636231
+
+
+infoblox:
+        resturl: "https://infoblox.ciena.com/wapi/v2.10.3"
+        user: "apriyada"
+        password:  !vault |
+                $ANSIBLE_VAULT;1.1;AES256
+                31613635623964383566346533616431626264646433653165613836333338323631646437316334
+                3939373761656665323436323334396464373961613432630a313038343339373133393739373539
+                35356633626537666165343036356637633835363033333630643965613534386366306562366665
+                3061336235343766370a366632356230376538333037623264646438623165393836656666366639
+                3639
+
+bpi_owner: bpidev
+bpi_group: bpidev
+bpi_password: !vault |
+        $ANSIBLE_VAULT;1.1;AES256
+        38363034353162643764303836666464613965366334333435363333313339393139666231616361
+        6639303738626266363630303735343435613331346438390a623731666165613965333332643232
+        65363332643236616164393932373132353339343335323933393362663439623736663964383765
+        6663376233613763650a326239396430376530376637366634346565363436393865623832616562
+        6335
+jenkins_owner: jenkins
+
+member_superadmin: [bpidevopsdr]
+
+member_bpinstaller: [bpidevopsdr,aozolin,ragrawa]
+
+member_devops: [bpidevopsdr,jenkinsdeploy,jenkinsdeploy2,gewang,aozolin,pozhath,dranders]
+member_invdefault: [ocole,sachinja]
+
+member_bpi: [aozolin,pting,mbaigano,kvanhoor,yrao,rcoles]   
+member_telstra-tpd: [amanprsi,pgoud] 
+member_bpinvtest: [ragrawa,rculley]
+member_vfnz: [gewang,ssabbine,cobolens,ebarkovs,mattday]
+golden_ami_owner_account: 633224771686
+
+sshkey_bpidevopsdr: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDdaJr/Fla5X7YnahqCvOheyrJzh6ztO9txiCqbFjTe6xWebttZusnNQJ+57yewOM7DKTUH0dKf2d9qS8o8SgbvkPvX2qFsXAWAmk7Gnd4aAa8Brqr6bNIU0zV7MAVsoS90gcbKPIak4CWcyddmyHfbFtgUQ0lTWIiPyI4he/IoSVo7oKNK4DG07i+riCIITCXiW4t+1sOt8nvJzPsbYW4F/tsbsBJkrr13E+kOgbJ5SYfMlAOpvmo+5hiY/ZClFfV6+cI6n4lGtA2xI3saFgg53aD4lsbeq4xR1SD0aCKMXU+xV08bBBVUvekg48LrHRyPKdoCfh0ocTstOa8q0rJ/ bpi-devops-dr"
+sshkey_jenkinsdeploy: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDOJNFv/2OX6Gr1XqZM+GC0AMkLS7jtRXORONHd8FVN7eBiOiU/9sLn2LLrhIHH/W0fHA47GX3Bf/Vmewg4Z5QbIe414fl47AAlLuNVBBm4r/urqog6dYo9PjNjBYMNgHw18b8RXtJ/x/gFAyjbJM41gFfm9j3bZM1iSJz49DHxZTheeSCr7XFkh3JVm5ypJkQQ7zILm6s/n/ZaNnPMftXUto6O+tjG2lLh8DlFphXIA7WxWtdi61dhxYAMabeshR3QKaSo981uQ2ZVQHbei0oDfInKjyMTXa+qt/U4WBaFLErkLeC9qRZlwZaaVviuBvCMj1JzOz6bv/7e93JvSlvH linuxdeployment1-23082019"
+sshkey_jenkinsdeploy2: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDBUxqlZXdHYOGm6v2t5MTSIHF6A2/iWJyTFtJjeJZbJbBB3pVxLdwwBExvfQ8XTO8L9b8vjPYkah0cX9conddrgCYJqGeue1Sam2yncfcNCoxYl4K8tqTT8Z79oi5MZI4mjkXO2074aUC4xaMLolia9SPbNdOHPGgVPljwf9i4LvvcDZGK1d9kIZhk0ETAopgVaTLhUrWAydsDP93EcMWfkadY2W3dTMP221G3nBy8v3z3N0iwfRCibnTWH8czWg5gW384CkTgr+8ljJtnpyz5D654mLvG2VRtmC83oVhAJENh0IFdUcweTem/v2zFEByc7+o4drTR9GL/u8JzCSAv jenkins@ip-10-78-102-49.ec2.internal"
+sshkey_aozolin: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDSf7g/JOfuLgDmytVAi+Pc5pOBBg0wh8Ut5wWImTFtHS4C9jXJCZFOj74+vPo19f6tAlqEHzY+lTz/d8EiuhWIJQVOPhu+Eme8HWq9nZFzcfKMflnt2rH23L7k0j1WPPso1Jrq6CuKJ9Fx3GMFwuPeyCY4+qPyQ3nqq5vcR1VEgqLyjcIy/hsAeW7251S9W5P0jT/PHFEBvpl5ET4mdU9DTDZbnlBF1abRP0oUaJb7D2gtqOzhiuuWxHT0N1yOzgLZfRfaLJzrxBm0qVNhHd8+Mqbr3AUINe/rGFae+75Fgrp+8oFphBoXiJf+ENRNEhXAuR/W8At7k5DJj+thE0fT aozolin@EUMR-AOZOLIN-1"
+sshkey_pting: "ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEAlzQXxTlbyh8LUskAWaJIud7mpZmne00Q8muTGIqCkA0v+T0PazVcEhhoS8kCz/xKFjksvlyz96DAv/6trratKTVFpRB+MSbeno+XUkJIHQI41BXVl2eCQHla/vrlNQF3xdp92G7R6dmQSqUKwSSWJFWgMigjaawaPopUMdg69emafGYykHfX2W00/exiGRpUAGXMgTvHVwY+vIdSJNmy8XpPhxZCSCDxC/Nw70pQgG8uqwvZxLlD+RnxL2QOVlxRlrJKn6LigTB20tg+qBaeYECnuDfvtXp9IyHQ7ddybqlYQDWfHTnL4N3KILUpRrQvfgutOan7rOvA8oX6Z5EeHw== paulusting-rsa-key-20190716"
+sshkey_mbaigano: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCmAvXfQLXFDxFhPRSQV0Xiu305rKZ2mYkxlefJNatVokFCuzMBYrYmRQ1dX2n3LouSFcQ56bP2zSgiBXEYZ8YnC2DcGQTGkEfx+LSzGOZZiV/A1OV/td506iCP5wVbRFJxxJReWLJi7TZIqyJ0LkD5TzssG9hlqriVb9Ms+pQ32H727wFGzakiPa3P+SzkYyUdICchHu06EOHCPWo5UjCbeaCjvwCHR1cqqsPTuSyTtRHIUf0q6vhjIIrrtNFz5hQF+G57GvsxLj/4gsUj4Q61R/mUwuxaeT3omNXAoNZGRM8TFv0OdAbkkvLkRDUeYjdcsH9pAlFcJzBHWqJbO0EP mbaigano@EUMR-MBAIGANO-2"
+sshkey_irawat: "ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQBuqvxh3B4gN/l8m7fJ+BtfbSPVLjjrqRjWqgGaO7Bpw0/r4t/oELWa4t5aSTMNsrnMZ6ckDIWJFDhm3FkYi31XZJ1piFvGMP2k/SxhNZPYrODN8lzEtrAvCDZycdIXhcjFw8Tec7l8MpFEd6XFI/eg3d3cvPb4e479xdImNwoOk7YEIu7eDqilJwPOHAxPIjXb+0b4Bvb+nNBva6FstzJ1zHMr1W/A1cyZytejc08Uveh1uLzXLiAbgAhbCDTpjc5Z7zsYfIFGdSEX3YAaMPLzkc+fQhX0znwksCyw7ieZvscoXrxZg80mxQ3k7hjIO5NY22AS+le0jrI61MwMEC7v rsa-key-inderrawat"
+sshkey_pozhath: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQClxU5dCTwAIAZP7kd232Di4zUXzCyWpSgun8QiIULNNq8lHEUtwn6OL3KcD4s8SpB2CfKkFH8SyIugz97zVI1GASGUYf5QKRrceTWA25Lz+zSStOYPG2Ut63NDYLTbrLDVvKWlSGFQ7X7pmckzFdeYNrVRGilfAc5vg7d34ikmc074vmPnhlg8GqosSIkmrNclgaXLCUp7W68nNHpmno+o2PFN5ecLUoEAB05qAjONUNcnQs2KzWZgq/dECuyYO6vcGIr9dyH/AjEEkfBIedaczVDexmqEVL9vmdSRWX9EBAS/5dAhURUCD+YdjCZGRD+amG8mzSck/+/OQPscEt3v pozhath@APMR-POZHATH-1"
+sshkey_kvanhoor: "ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEApLUInJRzh0IQlwNen63UQlYGqAeNCR+FSv/KfxCo/Wc4Xr4CMwc8CF5hNYllVH9+dPH6ie7l1lc1Io3ALZjl0oQuMzT4LX+ogQSC4JGGJKP6Q6C1l0Gct36I+KrHn3sLYKops38b9iDUN6cgFR/CzWSjpl4ditlaWXDteUCo+KUNum9YswBIahFUDj+MkeC79PjwFj0DkcFCPPafXM21E5i1+qr0fT8tUsa/PVxJDT1JGVUUEkUwpVNejYpQ+apdNJdwmVo0KdXIPNm6Ib5tfu/UGN8xjmTDgolo/R67L8iVPKjCypIryTrAFQWoGcp095ADDLF45XmYiZGaQqEFuQ== kvanhoorrsa-key-20190715"
+sshkey_yrao: "ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEAivCAYicrG1q4rPy+qu6qPCiC9MSKkFdFGVr5fQEva1VRt15qOzjUrhXOxaZfYdf9XUGvoWnTmsTZDWYtTr00lY9vqVpyQGp3HAC35zYFGUp3fqU2puHgVd5y++TmMeLvzQqdPrrvPFLziSST96enaeEhXjuEsJLndMh+VSt9cHR5gifxJ2+Ugh9+nvWXUASKli1QU23Qtbbw8xiBAwTqfq66FWp3hVv/y7kV8VcCKwKUCNqnF2ltaFGq8WXvqurgwjIqDXL6XKEK8nbnxllQKOdTdoHML6ceJ1EJ7F9fgQM03k+QZH0mqk1sNj2KoUhl1Ddfh1poiAVhdlB6eoXNaQ== rsa-key-20190715 yrao"
+sshkey_amanprsi: "ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEAl8BB9uhmC/4MDNipnMIPfa2pi0K7jPsmcqfJF78sWDYQHHKnJag+px5HoIAZBOND8fqse86oS+er9Oj7t5DZVRhJJBI4IACH8UiY8s851l2bgy9KGleWqXmB/rX5L6Iw4+c+9k2H67rzeDHQgSpDafpnGq9apTgWxOmyG6SUaC1/8fLrNOHu73kClYEjjHDGb+v0Tu5M1ewbfUqdyPjiqHW7u0G+JM4lx088Z6rQBnnaZfLOimEgX3e1Z88b6eY+xoU++QuZcaBRhnUR8dgwi8zH/JcREnRHAXhq2iFEjHgGu3CaQu+fmZCjk5KxyC/qaCMmcglPI9AwmGbfH6jBaQ== amansingh-20190723"
+sshkey_ragrawa: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDAA5pDIm65kAbQLOcB530LEkIdmHvH7BknhRtojFFUCsFQO5lqnqZLprQc3LkwF21WSt2NzuTCv0Sz2QT1y2kxh0IORX71as6fJHPmQ9UUeDOQNou58uaXVS1A3dqzYbJ3ZRi36rbN6L1C015g00lvrEL7XRqcRabr0bm7Gv01EMpaVk5CQhYttmNcnRY/5yGOaAvizM7Bc8IZz6B7o3MG+HZ9Jyzpm6zpY7E626++oT4pWMoWuXanDfc1iMVInF3/oUDvIuiEvRVKR0jha3qkJuj6jDiBeAG/acL1qdSehx3LrMV0yuU0lgmoUPxwoDf3qB1LQFshRx02X/+0d823 rakesh.agrwl@gmail.com"
+sshkey_rcoles: "ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEAjiCxtUv+NXGLwQZP5ceDbvSc7LCkIBrqXERdBrQ7+XLMsKU8Q0iBbHCT/JnROxyIgOBSKmDZeWLRfuMlRC5c5nY3GnQK6qMag4RYwoSy9rONrvBPSkB9BPvimOnzwGLZxcgU+qG54XN139mnTsUIs8uMv+mueDgx9sbmvKhovtFKlW9pGsntJgdVhzQM+Hp7vEkFdOY6N9NDIwcBuQVOumIK1158beOZ0bizeVFn0qGef3Enwu9DxjZuU8WJ40Uaqt1CFc72H2p8LIZ/vG9m7cp/R5w7FIT5xS3LAJoqvKCBUOqJmwDBQyqPQzD2Y78qfNbiP4l+MN/1VYWijHPweQ== richcoles-rsa-key-20190723"
+sshkey_gbhagwan: "ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEAmtEKvOyf11kqpXyIoOtHr97F3UpPRuIxSjAfzQPrQ5E0DbVTsFOuWaxLanJgnzcg4aaCMXP1EuQFWErCKJljNW0RQNYM7nwvM26Ow1k8ZqG0VvrqfokuFu8tbkqcEt4VG8t49aeOM6RC9yR78bvwMlFqucnmB3yHnfXf4D/VzZK04bj8tAP6zBdYDEI1Cr/42fIlmBPEBZAT+um3fXXdFmeFJoZjj+QJMdJtplXV2ngrSYebv7ypBXrW6hGQRNi/QRRYyfwPTRvRaA0Mr7FMq4BbVC+dYO/7HnyKUvdS+2g9RmXY8r2nrY4UBrpthMlRzjzpA+eMLmv6jN080lgx3Q== gauravbhagwani-rsa-key-20190723"
+sshkey_gewang: "ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEA5GM5Ek98vYy9YSdjQcj+DI8GTUr8baFVfPnLe7NWlxTuzdlx/eN4HILNWVnpA1qQySCE2Gxk2dt1bHtFtSMN66pFcEeHGbwzadWHImlGgOKCOTM5UkltgiXnmWPqR9URPpzAof9oYeEHSUBv3zEmietYFr5P6eE1kda/zZESoS1tZ3q85SWi0CmREDla8ctrlWEMOKb/cMof8PKx49HTLZ25KdxiIU48i2W9vmB+DPCFvjihzp3mQSmy+K4PWKqgTUmp6J+bkTkJBGdtn+qh3bYvfWVycc+S6WnyLe7i2ae8VMVlq0QtkxZlQc51vEe5ms1A6P5g8XWSXkt921k/AQ== geoffwang-rsa-key-20190724"
+sshkey_khushik: "ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEAxsCtO9yovbmcv1g4LV5buL3RhCu3/9rkn8bTn9X5ZADdiDAtExuGTwbd05S354dxobvsJcDxsaEuUkHhK0IQFPBfwUB4QsEOFGN1YX2Z00KSQIbWtWRWwiaV2x3A9cqgvXGdt+6v9RaEIP+XEtLDkwelczaSJy8izK6Fmxm4hOOXBNi2h38y47VvksvhR3AbUdKYP8ZsYFBeKVAIlhIXzez4Q2aN6lnC4dBScNL5HzhDrjbWeXOWJxiph0joI9noSyUCTfS2OeZTHEuGjnQDsTQR66cIZ4IZ1a03zZ8cmjq4Di1bz8qrOmpQyC68mSn4KrECaEXc85YSG4DjMLZTtw== khushik-rsa-key-20190724"
+sshkey_rculley: "ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAIEAo1ZF6I1sMMJM4ph+zi30YmnocdICzyUOTU41oXZUIEewFSWqXJCPbJ03tT0Z1vdNPZgET3+/jdbu+fXT7OF9eMu3pEx/4WlHKH6oq9m4NYEbAqVgBhH7DlvAGNnYiPraruGon/vrIGeMju1SlYTI49esFODgqTEy62n7M64Y4+E= RayCulley"
+sshkey_ataneja: "ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEAlVTS/J0reOpwxogHl0UzwZxJmFORWqq8DRwqTst0Hrr8QWEDrn3j1uIkLeUjLC9wIS1wN1sCcXGcfemOPx/ZpY4dlRP3hCXOKbC4pNe2sVQYIlMJYyiszkFgVnVJBlqu1zRc6R+eBMNhFFwy+V1Su3orIli7RxhhhaIqzWkQpjX/30PUjvT7F/Ay5bi7U+QV0VzT1Qb7XhMxtItxZqtlsqQEISzURmtYp77lJEpEMc0dbtnWsCpHRaUyFWX3pgr5AwvojxwbYN5mDoLxQQaBnQF+ePwIks9dTMfwJTedF37q2LxkX7FFfo3Gt47HGdpqtJvsYbdIjzBt9vHErVE6mw== ankit-rsa-key-20190807"
+sshkey_ftai: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDUPWuPsJa4HubFP7Y/6c/KtpbjWn7Hcriki3ji0XhUk/DBcFk9HxwsEmKdRFlZQn7D2DPbHrcaIfFWbgdi3k2ChYmRXldAP18CIjHdQhKAVjmwxV0vwwe1A1G2bFGzX7Dn3B8DUq3g9a2/m2wc2xNfVoyb3XhdaYVRnGRUI6YB64kSMADT0xuNvzsJoypSLZ9i0ZBcFrKhdSIm8KleaGltjytpA2MbUNCOL5p282esb/irlqXTRjEKhOGMc7BV/JLgq0xIh7Gg44xdk40TzOqfGZJ2mzlye/GfIW1DalAuEhq337oiVhAAP1YSk99Vov1rtMA+pKY5UY/jBf+X+rRD FTAI-PNJG5J-20190808"
+sshkey_jfoltin: "ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEAr2HBwBzX5Tq9CALkHiF15wfzJ7DI/32pMJn1g4yR5RgyA8SaPayIRQkbVmTSlN7ZyXxsv6s+6x0rjgacuQGU2wqjdvk0IHhsYgSQjV/Md0Atje/v4DMoZ9yUXEgJx3QTzS1sRzQEC+yoEmpMGaMx/ng+31/6rKcU4MkWIdClyUiHScHeqQZZYTFKKEBY2bH4UR7ef+TnrvLNi2xGowiZjn4ADydInJBNF83JyhTGixcMcmlakSRsEtvN7IhtcLQogZhueGK1VcsOgFEIFSBVqY1cI8N4PPD95nQPC6NsSvB/qFJUPOwM00rBT4bIC4+695YEMwDWzMF9w9CGa+glhQ== Juraj_Foltin-rsa-key-20190808"
+sshkey_pgoud: "ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEA8wn/YJxs8e50SZKP4B7Nt5appdVRCGoRTOwgHNXOVjH3A+4712pPyde7iMEAM1RphbZZq6rIlZpORq8Pro2Q5tJgRqPjoMvNc4PwSq9XAlGoQwQnlt1XyrG1Wb94E27/sPoPVPw5YwIRqItOLZVH27SnKESFryrWfEnwEghL3RWUAnSuNhW6YdrCHmPqOJhbcISt/XT+Sjjun3+M6a7tQe2V/U9DMQv8rMyj0A/LALxf73wtX4qmUqPztNlFZxuss45bMdWaxgMOKUWzg+w5SrvxQA3CLKANPCCVuQiwBcnU85goMlJHyQYBK8tbeznK8HBNsEU+c5HA7gzIxndKxQ== pankajgoud|rsa-key-20190809"
+sshkey_ssabbine: "ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEAyC6etORds/lD8MsaQr4JxQXMCamRQSYtV6uHZgG8YGjkVkODlkMuxsGaMIQaHX4pV1hrhgsVuCWs836Y9fchX6mgvm0S8LVqjB6HvgcIpahsiWqXk84yvNdgJumSLjDaxUTt6PunJkA+1s2TFZhxGN1l+icZxQOPPZiIjSoG26OKuy/7LalX71eOwM1oE04NwJuiupQ736z0z9yxww7ERq1YWkThs7tpy46G5mQybf6FoBTZ012h4QqhxaRtbm3ji8vWRgR6gdPEspTOuNJfGZbBc16Lm8fBS2h31Dj1W5t0JBfTAAsF6WY0LJQM7gL3jXJLz1eq0hv8PCNLiIyMqQ== Srividya-rsa-key-20190813"
+sshkey_dranders: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQChyZZhqah/bjTafoEoE76C0vtbInH9JcPJQs2Lfs+TFpNPNCfLZgKTJAPrSibkeQlLCzxYbJCnpfaU6PVx3lDVYRmP+0QaWhYqWTJQHETHS2MScfTLqEgVTP0FdD1i7aaeNELOa7J5LBqToEDBagsHcKri7afkCSEWIwsoZ/w35hYheID/3fllsfRQvpPnKEP02Xg8mWiipj626nV+cLKZANs7kbUsL57aQFu00GX5o/nSm6lJpn6fmDOzlLwKsB8tMtjhkO8jvLZ+luOnPErivRYYrrBhF50umsbeXL2SjQITNr5zCvxUVJ8TMmj2lb/1PsX7x8ezVN/rp0QjUgbR drewanderson-rsa-key-20190813"
+sshkey_cobolens: "ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEAgne1b0Vjudkj+dMZLFxnWkaV8UTL5EiOPg4FWpKbn2t6c3XTo0e+bjYmcLbwGOGAS3fneY/ArVmRBD2VgI6p+wsUj8LWdwCe0tXdSJGchEnN9w7aaEctkr+HA7B23Kw4Hbg+KGCkm9JIWU3wyKxaDFxCECh8Sw4oi6L92/fX/ZtEGUZZVuT5O8h3bY9ZgqxqcwQvBrdn0eSXj5T8TAylkTnl39SDS5Me8/2utk35jBT+gt/6zQnIPulrmijT0r3g+C8LvMudHPwrq9mHZCV8dz+tkhcAU2Q9qzIBs9A5JkSEyfs+p3gtuemJBPLv1lC0loaJsISTwqzhfIjC7KvQmQ== cobolens-rsa-key-20190814"
+sshkey_kshalya: "ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEAsEEh4cqNodez9WzR+nnDIL0zGv8JNKPfwexlErhmAC0u26xy8xR6CcmyP7sLg2MfWZmTess2qs/jnWbmLHwlJxyJTR4BUacFpxgSqi5AmDnyTN9JY/FEgmHMbkH9t5rB7hPWOAl20YAhr9XIPOx+W2zt+gp6m8lZ22zE2wcIaTrzNMz12iELQs1I9tdUQULPxKLHJnWhKa5vgjYsobXzK50yNbWdC3ANnzUveaDGkZQ+IU+zNhQfGtaBBWl4Dbpd6qvAa0WwsCpcz8W1BPSENsr7IjE/u4PgsAVGGD36X5zRJTvWq9a+P+ntJeHqm6XSilhwSM30+0E0WX/thjb0nw== kamal-rsa-key-20190814"
+sshkey_ebarkovs: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCuqMjilJBuwiA6sQ7t1E1JaViAEu29fAYI50cXPVRtiJuwJD3oosxuCx3R1IoVxBv3ed3NBnLYrx+K0opWZqXsKGOCIKemrmRMKehZlJ7mDfG1PHouan6sFr6cJ5jKEDAUvUND6RdSv/xu3YuqD3XD2F80VgLugdTdeAUJruviVCeC8rTF9sR82m+bDANVcKvRPqdPZ/1e6XI/gV5Aq0m837iGxqZ60JsAPnxIUFlX5bpc1xLD+W9K77UM49damviWE0T9Y6khDdYw3Eb+hjvMrIkv7ovYjhoW4TX2ZYEFHQJozZyd8usP6P3YMxvUHlC/aYgWzbpLFUYtHPNyDIY7 yevgeny-barkovsky-2019-08-30"
+sshkey_mattday: "ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEAjL6U/s6wAK7yUH/XTtvnqeTV8ZPi4A4eU6oSZ6XuFXcEbTzCLiQpE1070uDE0almd5heWVOsj1n5+T5yb6kUMwFUWF6iCd9iIiPtvqq7V7NWQcgOOBRYp8Innb6f2ZM5JFfCNvt+MhhAOCratoH9IbAXgPOz4nNjbGZKJU9ynGKnZWpKNqhWiOQMNdqNsOk4zDwGkI0HMIUbbAzvRPYMI4xbUnLKcDWD10+Lxne7huGvsKMW/nO61mKvOCsUV/L+pywsV2WHckQvblFPDjA8eGLxHcw8mTbf0vQaUAeKYV+lXJxHVwrEFaQBh3itunPwWTOs8N8XZr2/6Ier4Xma6w== mattday-rsa-key-20190902"
+sshkey_ocole: "ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEAlEU7XjkbXwJVG8VFehS/LaOmt8zQ7uAHwzDN9vM5damgCoNH9JR4vWk0aDY8mXyou5cBQ5GkxfFLV+qgkQnDbkUZawaBnvwOs10eqDCElwaMsmV887o3aMyhmXuWtWjLjKBT/Pi+0bnb80Rl+IPxINiLcGjBQEO0i0JJNZT5a9yDTmKb8ur4KSjWU5URLZc2C91x2XkpvWJFluy7lc+O+FqWbScuAhUlLvPbzWhSwROAp+tBvUbSTiY3qPOYGZJFSV9ZEzCxlbL5dm44eeFUbNIu/HWqIPwOIqiiHYpE4rPFxwrjf4MCATDcpw4A7O/wA2m/jTUd5fhLLjKj4RigHw== owain cole rsa-key-20190909"
+sshkey_sachinja: "ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEA6L6Dtx/JSdF0RJvuv+rs4S45KybA4zO6YD4bBmyVImI5giXIbvQ213eZrjnFEzSLgCHWGJq5sNq8UYE3bX64cPRgq963lzc6in5FMEv81O4el5i/gm9UwXsNeZlQGo6CzI4slIIReLgYFSwFSE9/qdX7YyNQY7B/jmI7k4ze1b8PvFz6MyFbQrPxtGjYx/wSUjH5B3Z1PAELNAQdT40xcNpM6MxRXrh1/83TtTj0zqKLmSZ2axX4NPDPKGdOtFnF0ptRB8fv+9GwZUKMkE2XGgILri42ZPp7xZgk8JMz81/0/n/hsrDKWs4BYLh/locmY5HhlxoqnnQWwhbSdcFi5w== sachinja-rsa-key-20191126"
+sshkey_bpidevopsdr_ap_south_1: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC1d/0rmgJ9o+ZEaL7lEQyEJE44MjAsPIFCqTf4xOcr/0JpCTicfDBXeSetxta3gRn+BFfjuig6apAnq+RbAyXqkCV47g4sAnwLPwxX67cpnd5Hi7s2bI/KII0lKAdy2KbVtQ4fWvwFpHDJUx/aYzTeXJi8ZjbebYk4N325/UazWQQQ1LClWD2KKaFSUfmlcsAYstjKKHwnORBYnVy5uyHvmgccmeXzRr8GdqDYPJRuEicUC7C4UYEUcImUmO+6ZhLDtewDyUjKelHmMN3AT8vMxeA/5VHvUG9wYwjRhu5ktmaR0jjTEuIea+xm7Pa4uFY3fQJakFG/DvBvYvmqrdbp bpi-devops-ap-south-1"
+
+bphub_repo:
+        url: "bphub.blueplanet.com"
+        apprepo: docker-v2-local 
+        chartrepo: "{% if release_ver_qualifier is defined and release_ver_qualifier | length>0 and release_ver_qualifier.find('SNAPSHOT')>0 %}charts-dev{% elif release_ver_qualifier is defined and release_ver_qualifier | length>0 and release_ver_qualifier.find('RC')>0 %}charts-dev{% else %}charts-dev{% endif %}"
+        user: ci-user
+        password: !vault |
+          $ANSIBLE_VAULT;1.1;AES256
+          66336162643339353932373862663939303463393862383561373939396632633832383735666563
+          6232653230633863643837396231346365663962383965660a323237323961376263333138646362
+          32643033343937313835363662326563623139646532333362363065653761373365306139393161
+          6334623238366266330a373637636631623838636466636530336533383236346238333333323361
+          30363633333032303130363930663139633639353631313665353739343161373132653039383262
+          30666235373535643865363863386163656434393636636265353366303961393831356635623538
+          37313933303532336337353365653738663737666364393061613061333562643239336637356261
+          35613965653739306633
+
+s3_bpi_devops_bucket: bpi-devops
+helm_binary: helm-v3.8.0-linux-amd64.tar.gz
+
+core_ui_git:
+    url: https://git.eng.blueplanet.com/software/core-ui/core-ui.git
+    domain: git.eng.blueplanet.com
+    location: software/core-ui/core-ui
+    username: project_65_bot
+    access_token_name: jenkins-ci
+    access_token: GxzyhqGDYjoVyqStssMr
+    email: "project_65_bot@noreply.git.eng.blueplanet.com"
+
+helm_artifactoryplugin_vesion: "1.0.2"
+
+
+helm_chart_push_script: | 
+        #set -x
+        chartVersion=$(yq '.version' Chart.yaml)
+        chartName=$(yq '.name' Chart.yaml)
+        httpStatusCode=$(curl -u "{{bphub_repo.user}}:{{bphub_repo.password}}" -o /dev/null -s -w "%{http_code}\n" "https://{{bphub_repo.url}}/artifactory/{{chart_location | default('helm-local-dev') }}/${chartName}/${chartName}-${chartVersion}.tgz")
+        echo "http status code for ${chartName}-${chartVersion} is $httpStatusCode"
+        if [[  $httpStatusCode -eq 404 ]];then
+                exitCode=1
+                retry=0
+                maxRetry=60
+                while [[ $exitCode -ne 0 ]]; do 
+                        echo "retry iteration $retry"
+                        if [[ $retry -eq $maxRetry ]];then 
+                                echo "max retry reached "
+                                exit 1; 
+                        fi
+                        retry=$(($retry+1)) 
+                        helm dependency update .
+                        exitCode=$?
+                        sleep 30
+                done
+                helm push-artifactory . blueplanet
+        elif [[ $httpStatusCode -eq 401 ]];then
+                echo "Invalid credentials"
+                exit 1
+        elif [[ $httpStatusCode -eq 200 ]];then
+                echo "${chartName}-${chartVersion} already exist in bphub"
+        fi       
+
+     
