@@ -1,0 +1,17 @@
+core_version: "20.6.0-SNAPSHOT"
+bpi_version: "20.6.0-SNAPSHOT"
+bpiapp_version: "20.6.0-SNAPSHOT"
+neo4j_home: "/opt/neo4j-enterprise-3.5.2"
+#    neo4j_home: "/opt/neo4j-enterprise-4.0.2"
+java_home: "/usr/lib/jvm/java-1.8.0-openjdk"
+#    java_home: "/usr/lib/jvm/java-11-openjdk"
+#    java_path: "/usr/lib/jvm/java-11-openjdk-11.0.6.10-1.el7_7.x86_64"
+tomcat_home: "/opt/apache-tomcat-9.0.0.M17"
+host_ip: "127.0.0.1" 
+neo4j_user: "neo4j"
+neo4j_pwd: "drni"
+postgres_user: "postgres"
+postgres_pwd: "12345678"
+
+dbrestart_wait_default: "300"
+
